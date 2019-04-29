@@ -33,3 +33,7 @@ Restricciones
 * Utilizar un único array para almacenar a todos los empleados. No usar colecciones dinámicas.
 * Hacer uso de las ventajas de la programación orientada a objetos: herencia, redefinición y polimorfismo.
 * Las clases lógicas (las del diagrama) no pueden tener entrada o salida de datos por pantalla de ningún tipo. Esto debe ser realizado por otra clase que cree los objetos de las clases lógicas y les asigne los datos necesarios.
+
+**Ejercicio 6**
+
+Resolver los ejercicios 4 y 5 usando ArrayList en lugar de Arrays.
