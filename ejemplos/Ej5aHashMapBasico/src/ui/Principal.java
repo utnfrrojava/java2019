@@ -1,9 +1,11 @@
-package entidades;
+package ui;
 
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
+
+import entidades.Persona;
 
 public class Principal {
 
