@@ -45,10 +45,16 @@
     <div class="container">
       <form class="form-signin" id="myForm" name="myForm" action="" method="post">
         <h2 class="form-signin-heading">Hola <%=p.getNombre()+" "+p.getApellido()%></h2>
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input name="email" id="inputEmail" class="form-control" placeholder="email" required="" autofocus="" type="">
-        <button class="btn btn-lg " onclick="javascript: submitForm('personaSimple/search')">Buscar</button>
-        <button class="btn btn-lg " onclick="javascript: submitForm('personaSimple/new')">Nuevo</button>
+        <label for="inputEmail" class="sr-only">User</label>
+        <input email="email" id="inputEmail" class="form-control" placeholder="email" required="" autofocus="" type="">
+        <label for="inputUsername" class="sr-only">User</label>
+        <input name="username" id="inputUsername" class="form-control" placeholder="userame" required="" autofocus="" type="">
+        <label for="inputPassword" class="sr-only">User</label>
+        <input name="password" id="inputPassword" class="form-control" placeholder="password" required="" autofocus="" type="">
+        <button class="btn btn-lg " onclick="javascript: submitForm('persona/consulta')">Search</button>
+        <button class="btn btn-lg " onclick="javascript: submitForm('persona/alta')">New</button>
+        <button class="btn btn-lg " onclick="javascript: submitForm('persona/modificacion')">Edit</button>
+        <button class="btn btn-lg " onclick="javascript: submitForm('persona/baja')">Delete</button>
       </form>
       <div class="row">
 		 <h4>Personas</h4>
@@ -81,8 +87,8 @@
   					<label class="custom-control-label" for="defaultDisabled"><%=per.isHabilitado()?"Si":"No"%></label>
 				</div>
 				</td>
-				<td><a href="personaSimple/edit?id=<%=per.getId()%>">Edit</a></td>
-				<td><a href="personaSimple/delete?id=<%=per.getId()%>">Borrar</a></td>
+				<td><a href="personas/modificacion?id=<%=per.getId()%>">Editar</a></td>
+				<td><a href="personas/baja?id=<%=per.getId()%>">Borrar</a></td>
 		      </tr>
 		      <%} %>
 		    </tbody>

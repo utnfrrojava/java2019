@@ -49,8 +49,18 @@ public class Signin extends HttpServlet {
         
         p = ctrl.validate(p);
         
-        request.getSession().setAttribute("usuario", p);
-        request.getSession().setAttribute("listaPersonas", perCtrl.getAll());
+        /* La información para utilizar en otro jsp puede almacenarse en la
+         * sessión o en la propia request y utilizar forward.
+         * En sessión debe evitarse almacenar información excesiva debido a
+         * que se mantiene en memoria a través de todos los request hasta que
+         * termina la sesión. Adicionalmente si se va a utilizar la información
+         * en la siguiente página y no debe mantenerse es mejor almacenarla
+         * en la request
+         */
+        request.getSession().setAttribute("usuario", p); // esto es correcto
+        //request.getSession().setAttribute("listaPersonas", perCtrl.getAll()); //esto sería incorrecto
+        request.setAttribute("listaPersonas", perCtrl.getAll()); //esto es correcto
+        
         System.out.println(p);
         request.getRequestDispatcher("WEB-INF/UserManagement.jsp").forward(request, response);
         

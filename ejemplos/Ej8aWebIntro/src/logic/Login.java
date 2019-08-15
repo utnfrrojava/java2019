@@ -15,7 +15,7 @@ public class Login {
 		 * adecuado para generar un hash de la password utilizando un cifrado
 		 * asimétrico como sha256 y utilizar el hash en lugar de la password en plano 
 		 */
-		return dp.getByUser(p);
+		return dp.getByCredentials(p);
 		//return null;
 	}
 
