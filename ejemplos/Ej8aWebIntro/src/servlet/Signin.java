@@ -16,7 +16,9 @@ import logic.*;
 @WebServlet({ "/Signin", "/signin", "/signIn", "/SignIn", "/SIGNIN" })
 public class Signin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	//private String dest="WEB-INF/UserManagement.jsp";
+	private String dest="WEB-INF/UserManagement2.jsp";
+	
     /**
      * Default constructor. 
      */
@@ -62,7 +64,7 @@ public class Signin extends HttpServlet {
         request.setAttribute("listaPersonas", perCtrl.getAll()); //esto es correcto
         
         System.out.println(p);
-        request.getRequestDispatcher("WEB-INF/UserManagement.jsp").forward(request, response);
+        request.getRequestDispatcher(dest).forward(request, response);
         
 	}
 
